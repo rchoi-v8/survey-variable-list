@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>생활시간조사 · 조사 변수 목록</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">조사 변수 목록</a></div>
+    <nav class="pnav">
+      <a href="index.html">메인</a>
+      <a href="01-knhanes.html">국민건강영양조사</a>
+      <a href="02-food.html">식품소비행태조사</a>
+      <a href="03-processed.html">가공식품 소비자태도조사</a>
+      <a href="04-timeuse.html" class="on">생활시간조사</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="phead">
+    <p class="eyebrow">2024 · MDIS 제공 항목</p>
+    <h1>생활시간조사</h1>
+    <p class="lede">국가통계 마이크로데이터(MDIS)의 2024년 제공 항목 1,075개를 파일별·항목 순서대로 정리했습니다. 가구정보 411 · 시간대 360 · 시간량 304개입니다.</p>
+    <div class="meta">
+      <span class="chip"><b>1,075</b> 개 항목</span>
+      <span class="chip"><b>3</b> 개 파일</span>
+      <span class="chip"><b>미보유</b> MDIS 다운로드</span>
+    </div>
+  </section>
+
+  <div class="notice "><strong>폴더에 생활시간조사 데이터 파일이 없습니다.</strong> 아래 목록은 MDIS에서 SAS·SPSS·CSV로 내려받는 2024년 자료의 항목 목록입니다. 실제 데이터를 받은 뒤 이 목록과 대조해 사용하세요. ‘시간대_9월’·‘시간량_9월’은 같은 항목 구조의 9월 조사분이라 따로 넣지 않았습니다.</div>
+
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input id="q" type="search" placeholder="변수명·라벨·문항·코드 검색 (예: 식사, A1, 남자)" autocomplete="off">
+    </div>
+    <label class="toggle" title="체크한 변수만 표시"><input id="onlySel" type="checkbox"> 선택만 보기</label>
+    <label class="toggle" title="값 라벨을 줄이지 않고 표시"><input id="showVals" type="checkbox"> 값 라벨 펼치기</label>
+    <button id="expandAll" class="btn">그룹 모두 펼치기</button>
+    <button id="csv" class="btn primary">선택 변수 CSV</button>
+    <button id="clear" class="btn">선택 초기화</button>
+    <span id="count" class="count"></span>
+  </div>
+
+  <div class="tablecard">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th class="c-no">#</th>
+          <th class="c-pick">선택</th>
+          <th class="c-var">변수(항목)명</th>
+          <th class="c-label">설명 · 유형/ID</th>
+          <th class="c-val">값 라벨 (코드)</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div id="empty" class="empty">검색 결과가 없습니다.</div>
+  </div>
+  <p class="hint">변수명을 클릭하면 복사됩니다. 그룹은 처음에 접혀 있습니다. 그룹 이름(A13 등)을 클릭하면 전체 선택/해제, ▸를 누르면 펼쳐집니다. 체크한 변수는 이 브라우저에 자동 저장되며, ‘선택 변수 CSV’로 내보낼 수 있습니다.</p>
+
+<details class="refbox">
+  <summary>참고 · 파일 구성과 시간대 코드 읽는 법</summary>
+  <p><b>가구정보</b> 가구·가구원 특성과 10세 미만 가구원 정보(411개) ·
+     <b>시간대</b> 10분 단위 144칸의 주행동·동시행동(360개) ·
+     <b>시간량</b> 행동분류별 하루 총 시간(304개).</p>
+  <p>시간대 변수 값은 <code>주행동코드(3)+ICT사용(1)+장소/이동수단(2)+함께한사람(1~6)</code>이 붙은 결합 코드입니다.
+     예: <code>1114011</code> = 111 수면 · 4 ICT 미사용 · 01 자기 집 · 1 혼자.</p>
+  <p>행동분류는 대분류 9 · 중분류 45 · 소분류 153이며, ‘기분좋은행동/기분좋지않은행동/스트레스받은행동’ 항목의 코드표에 153개 분류가 들어 있습니다.</p>
+</details>
+</main>
+
+<footer>
+  <div class="wrap">출처: 통계청 생활시간조사 · 정리 기준 2024 · 변수 1,075개</div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="assets/data/timeuse.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

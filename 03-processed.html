@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>가공식품 소비자태도조사 · 조사 변수 목록</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">조사 변수 목록</a></div>
+    <nav class="pnav">
+      <a href="index.html">메인</a>
+      <a href="01-knhanes.html">국민건강영양조사</a>
+      <a href="02-food.html">식품소비행태조사</a>
+      <a href="03-processed.html" class="on">가공식품 소비자태도조사</a>
+      <a href="04-timeuse.html">생활시간조사</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="phead">
+    <p class="eyebrow">2024 · 가구용</p>
+    <h1>가공식품 소비자태도조사</h1>
+    <p class="lede">가구용 원자료의 전체 변수 1,091개를 데이터 열 순서대로 정리했습니다. KREI 공식 코드북의 변수 라벨과 값 코드를 그대로 반영했습니다.</p>
+    <div class="meta">
+      <span class="chip"><b>1,091</b> 개 변수</span>
+      <span class="chip"><b>2024</b> 가구용</span>
+      <span class="chip"><b>Excel</b> 원자료</span>
+    </div>
+  </section>
+
+  <div class="notice info">변수 라벨과 값 코드를 <strong>2024년 가공식품 소비자태도조사 코드북(가구용, KREI)</strong>에서 채웠습니다. 조사표 B파트는 분할 설문이라 분석 시 가중치 선택에 주의해야 합니다(아래 참고).</div>
+
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input id="q" type="search" placeholder="변수명·라벨·문항·코드 검색 (예: 식사, A1, 남자)" autocomplete="off">
+    </div>
+    <label class="toggle" title="체크한 변수만 표시"><input id="onlySel" type="checkbox"> 선택만 보기</label>
+    <label class="toggle" title="값 라벨을 줄이지 않고 표시"><input id="showVals" type="checkbox"> 값 라벨 펼치기</label>
+    <button id="expandAll" class="btn">그룹 모두 펼치기</button>
+    <button id="csv" class="btn primary">선택 변수 CSV</button>
+    <button id="clear" class="btn">선택 초기화</button>
+    <span id="count" class="count"></span>
+  </div>
+
+  <div class="tablecard">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th class="c-no">#</th>
+          <th class="c-pick">선택</th>
+          <th class="c-var">변수명</th>
+          <th class="c-label">변수 라벨 / 문항</th>
+          <th class="c-val">값 라벨 (코드)</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div id="empty" class="empty">검색 결과가 없습니다.</div>
+  </div>
+  <p class="hint">변수명을 클릭하면 복사됩니다. 그룹은 처음에 접혀 있습니다. 그룹 이름(A13 등)을 클릭하면 전체 선택/해제, ▸를 누르면 펼쳐집니다. 체크한 변수는 이 브라우저에 자동 저장되며, ‘선택 변수 CSV’로 내보낼 수 있습니다.</p>
+
+<details class="refbox">
+  <summary>참고 · B파트 가중치 적용 (A타입 / B타입)</summary>
+  <p>A타입 문항은 <code>HHaFWT</code>, B타입 문항은 <code>HHbFWT</code>, 그 외 문항은 <code>HHFWT</code>를 적용합니다.</p>
+  <p>A타입: BA1, BA2, BC1, BC2, BC3, BE1, BE2, BE3, BG1, BG2, BG3, BG4, BI1, BI2<br>
+     B타입: BB1, BB2, BD1, BD2, BD3, BF1, BF2, BF3, BH1, BH2, BH3</p>
+</details>
+</main>
+
+<footer>
+  <div class="wrap">출처: 농림축산식품부·한국농촌경제연구원 가공식품 소비자태도조사 · 정리 기준 2024 · 변수 1,091개</div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="assets/data/processed.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

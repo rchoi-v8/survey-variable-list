@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>조사 변수 목록 · 프로젝트 변수 선별</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">조사 변수 목록</a></div>
+    <nav class="pnav">
+      <a href="index.html" class="on">메인</a>
+      <a href="01-knhanes.html">국민건강영양조사</a>
+      <a href="02-food.html">식품소비행태조사</a>
+      <a href="03-processed.html">가공식품 소비자태도조사</a>
+      <a href="04-timeuse.html">생활시간조사</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">4개 조사 · 최신 공개판 · 전체 변수</p>
+    <h1>조사별 변수 목록</h1>
+    <p class="lede">데이터 파일이 있는 3개 조사는 원자료의 열 순서를, 생활시간조사는 MDIS 제공 항목 순서를 기준으로 정리했습니다. 조사별 페이지에서 필요한 변수를 체크하면 브라우저에 저장되고, CSV로 내보내 정의서에 붙일 수 있습니다.</p>
+  </section>
+
+  <div class="grid">
+    <article class="card">
+      <p class="kicker">2024 · 제9기 3차</p>
+      <h2>국민건강영양조사</h2>
+      <p>HN24_ALL.sav 전체 변수. 설문·검진·식품섭취가 한 파일에 포함되어 있습니다.</p>
+      <div class="stats">
+        <div><b>813</b>변수</div>
+        <div><b data-sel="knhanes">0</b>선택</div>
+      </div>
+      <a class="go" href="01-knhanes.html">변수 목록 열기</a>
+      <p class="sel">값 코드 537개는 질병관리청 변수설명·이용지침서 기준입니다.</p>
+    </article>
+
+    <article class="card">
+      <p class="kicker">2025 · 성인가구원</p>
+      <h2>식품소비행태조사</h2>
+      <p>성인가구원 원자료 2,088개 중 동거 가구원 930개를 제외한 1,158개. 라벨·코드를 함께 제공합니다.</p>
+      <div class="stats">
+        <div><b>1,158</b>변수</div>
+        <div><b data-sel="food">0</b>선택</div>
+      </div>
+      <a class="go" href="02-food.html">변수 목록 열기</a>
+      <p class="sel">식품 구매·소비·식행동 문항이 밀집해 있습니다.</p>
+    </article>
+
+    <article class="card">
+      <p class="kicker">2024 · 가구용</p>
+      <h2>가공식품 소비자태도조사</h2>
+      <p>가구 내 식품 주 구입자 대상 원자료. KREI 공식 코드북의 라벨·코드를 반영했습니다.</p>
+      <div class="stats">
+        <div><b>1,091</b>변수</div>
+        <div><b data-sel="processed">0</b>선택</div>
+      </div>
+      <a class="go" href="03-processed.html">변수 목록 열기</a>
+      <p class="sel">B파트는 A/B 타입별로 가중치가 다릅니다.</p>
+    </article>
+
+    <article class="card">
+      <p class="kicker">2024 · 데이터 미보유</p>
+      <h2>생활시간조사</h2>
+      <p>MDIS에서 내려받는 가구정보·시간대·시간량 파일의 항목 1,075개. 폴더에는 아직 데이터가 없습니다.</p>
+      <div class="stats">
+        <div><b>1,075</b>항목</div>
+        <div><b data-sel="timeuse">0</b>선택</div>
+      </div>
+      <a class="go" href="04-timeuse.html">변수 목록 열기</a>
+      <p class="sel">로그인 후 SAS·SPSS·CSV로 받아 목록과 대조하세요.</p>
+    </article>
+  </div>
+
+  <section class="section">
+    <h2>사용법</h2>
+    <ol class="steps">
+      <li><b>1. 조사 페이지에서 검색</b>변수명·라벨·문항·코드로 찾고, 필요 없다고 판단한 변수는 체크하지 않습니다.</li>
+      <li><b>2. 필요한 변수만 체크</b>회색 그룹 줄의 이름(A13 등)을 누르면 전체 선택, 일부만 필요하면 개별 체크하세요. 체크 상태는 이 브라우저에 자동 저장됩니다.</li>
+      <li><b>3. CSV로 내보내기</b>조사명·연도·변수명·라벨·코드가 함께 저장되어 변수 정의서에 바로 붙일 수 있습니다.</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>데이터 기준 · 보유 현황</h2>
+    <table class="src">
+      <thead><tr><th>조사</th><th>기준</th><th>데이터 파일</th><th>형식</th><th>변수</th><th>보유</th></tr></thead>
+      <tbody>
+        <tr><td>국민건강영양조사</td><td>2024 (제9기 3차)</td><td>HN24_ALL.sav</td><td>SPSS</td><td>813</td><td>보유</td></tr>
+        <tr><td>식품소비행태조사</td><td>2025</td><td>(data_가중) 2025 식품소비행태조사_성인가구원.xlsx</td><td>Excel</td><td>1,158</td><td>보유</td></tr>
+        <tr><td>가공식품 소비자태도조사</td><td>2024</td><td>[통계원시자료] 2024년 가공식품 소비자태도조사_가구용.xlsx</td><td>Excel</td><td>1,091</td><td>보유</td></tr>
+        <tr><td>생활시간조사</td><td>2024</td><td>가구정보 · 시간대_전체 · 시간량_전체</td><td>SAS·SPSS·CSV</td><td>1,075</td><td><span style="color:#b54708;font-weight:600">미보유</span> (MDIS)</td></tr>
+      </tbody>
+    </table>
+    <p class="hint" style="margin-top:14px">국민건강영양조사 코드는 <a href="https://knhanes.kdca.go.kr/knhanes/dataAnlsGd/varExpln.do" target="_blank" rel="noopener">질병관리청 변수설명</a>에서 확인할 수 있습니다.</p>
+  </section>
+
+  <section class="section">
+    <h2>알아둘 점</h2>
+    <div class="notice" style="margin-top:4px">
+      <strong>변수 목록은 실제 데이터 파일 기준입니다.</strong> 보유한 원자료는 파일의 열을 기준으로 했고, 코드는 공식 코드북으로 채웠습니다(국민 537 · 가공식품 715). 식품소비행태조사는 동거 가구원 930개를 제외한 1,158개만 남겼습니다.
+      생활시간조사는 폴더에 데이터가 없어 MDIS 제공 항목 목록만 반영했습니다. SAS·SPSS·CSV 파일을 받은 뒤 실제 변수명과 대조해야 합니다.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">정리 기준 2024–2025 최신 공개판 · 파일 5개(index + 조사 4) · 공유 스타일 assets/style.css</div>
+</footer>
+
+<script>
+(function () {
+  document.querySelectorAll("[data-sel]").forEach(function (el) {
+    var id = el.getAttribute("data-sel");
+    try {
+      var n = JSON.parse(localStorage.getItem("varpick:" + id) || "[]").length;
+      el.textContent = n.toLocaleString();
+    } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
